@@ -8,23 +8,23 @@ import { NewsApiService } from './news-api.service';
 })
 export class AppComponent {
 
-  mArticles: Array<any> = ["a1", "a2", "a3"];
-  mSources: Array<any> = ["s1", "s2", "s3"];
+  mArticles: Array<any>;
+  mSources: Array<any>;
 
   constructor(private newsapi: NewsApiService) {
   }
 
   ngOnInit() {
     //load articles
-    // this.newsapi.getArticles().subscribe(data => this.mArticles = data["articles"]);
+    this.newsapi.getArticles().subscribe(data => this.mArticles = data["articles"]);
 
     //load news sources
-    // this.newsapi.getSources().subscribe(data => this.mSources = data["sources"]);
+    this.newsapi.getSources().subscribe(data => this.mSources = data["sources"]);
 
   }
 
   searchArticles(source){
 		console.log("selected source is: "+source);
-		// this.newsapi.getArticlesByID(source).subscribe(data => this.mArticles = data['articles']);
+		this.newsapi.getArticlesById(source).subscribe(data => this.mArticles = data['articles']);
 	}
 }
