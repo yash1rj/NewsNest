@@ -20,7 +20,7 @@
       <div class="card-deck1">
         <div class="card example-card" *ngFor="let article of mArticles">
           <mat-card-title class="title">{{ article.title }}</mat-card-title>
-          <mat-card-subtitle>{{ article.source.name }}</mat-card-subtitle>
+          <mat-card-subtitle class="subtitle">{{ article.source.name }}</mat-card-subtitle>
           <img class="img-fluid img-article" src={{article.urlToImage}} alt="">
           <div class="card-body example-card-body">
             <p class="card-text">{{ article.description }}</p>
@@ -30,7 +30,7 @@
               <button mat-button color="primary">
                 {{ article.publishedAt | date:'medium' }}
               </button>
-              <a mat-button color="primary" href={{article.url}} target="_blank">
+              <a mat-button color="primary" href={{article.url}} target="_blank" class="float-right">
                 <mat-icon>visibility</mat-icon> More
               </a>
             </mat-card-actions>
