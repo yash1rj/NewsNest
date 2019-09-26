@@ -8,24 +8,38 @@
     bottom: 0;
     left: 0;
     right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .title {
     font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.subtitle {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .img-article {
     height: 350px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
 }
 
 .action-buttons {
-    text-align: center;
+    text-align: justify;
 }
 
 .example-toolbar {
     position: fixed;
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
     z-index: 2;
+    right: 0px !important;
+    left: 0px  !important;
 }
 
 .example-sidenav-container {
@@ -57,7 +71,7 @@
     min-width: 0;
     word-wrap: break-word;
     background-clip: border-box;
-    border: 1px solid rgba(#000, .03);
+    border: 1px solid #cfd5fd;
 }
 
 .example-card-body {
